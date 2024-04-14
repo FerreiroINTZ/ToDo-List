@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background: linear-gradient(30deg, 0E1225, red); */
+    background: linear-gradient(90deg, #0E1225, #131834, #0E1225, #0E1225);
+    height: 80px;
+    
+    .titulo{
+        margin: 0px 30px;
+        font-size: 36px;
+    }
+
+    .social{
+        display: flex;
+        gap: 40px;
+        font-size: 24px;
+
+        a{
+            position: relative;
+            /* background: blue; */
+            width: inherit;
+        }
+
+        a::before{
+            position: absolute;
+            content: "";
+            bottom: -3px;
+            width: 6px;
+            border-bottom: 2px solid white; /* #1e2855 */
+            border-radius: 10px;
+            transition: .5s ease;
+        }
+
+        a:hover::before{
+            width: 100%;
+        }
+    }
+}

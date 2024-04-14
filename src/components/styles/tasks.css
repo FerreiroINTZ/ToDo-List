@@ -1,0 +1,123 @@
+.tasks-background{
+    display: flex;
+    justify-self: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: start;
+    background: #1F2534;
+    border-radius: 10px;
+    /* margin: 30px; */
+    box-shadow:inset 0px 0px 12px rgba(255, 255, 255, .3);
+    padding: 40px;
+    width: 803px; 
+    height: 500px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar, &::-webkit-scrollbar-corner{
+        width: 3px;
+        background: none;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: rgba(255, 255, 255, .5);
+        border-radius: 10px;
+    }
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    background-color: #0A3A49;
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+
+    h2{
+        font-size: 24px;
+    }
+
+    span{
+        font-size: 12px;
+    }
+    hr{
+        opacity: 0.2;
+        margin-top: 5px;
+    }
+    p{
+        margin-top: 10px;
+        font-size: 12px;
+        overflow: scroll;
+        
+        &::-webkit-scrollbar, &::-webkit-scrollbar-corner{
+            background: none;
+            width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background: rgb(41, 95, 167);
+        }
+    }
+
+    /* estilo do componente ue adiciona uma tarefa */
+    .taskInfo-inp-title, .taskInfo-inp-label, .taskInfo-inp-subject{
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .8);
+        background: none;
+        text-align: center;
+        color: white;
+        margin: 5px 0px 0px 0px;
+
+        option{
+            color: black;
+        }
+    }
+
+    .taskInfo-inp-save{
+        margin: 5px 0px 0px 0px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background: none;
+        color: white;
+        cursor: pointer;
+        transition: .3s;
+
+        &:active{
+            background: white;
+            color: black;
+        }
+    }
+
+    .taskInfo-inp-subject{
+        flex: 1;
+        max-width: 100%;
+        min-width: 100%;
+
+        &::-webkit-scrollbar, &::-webkit-scrollbar-corner{
+            width: 3px;
+            background: none;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background: red;
+        }
+    }
+}
+
+.addTask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #0E2932;
+    padding: 10px;
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.addTask:hover{
+    background: #102e38;
+}
