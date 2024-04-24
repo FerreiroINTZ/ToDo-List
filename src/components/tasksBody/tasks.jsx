@@ -1,37 +1,12 @@
-import { useState } from 'react'
+import { Children, useState } from 'react'
 import Task from './task'
 import AddTask from './addtask'
 import TaskInfos from './taskinfos'
 import "../styles/tasks.css"
 
-function corpo({getTasks}) {
-  const [able, setAble] = useState(true)
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      task: "Teste 1",
-      tipo: "nada",
-      content: "lorem",
-      completa: false
-    }
-  ])
+function corpo({able, setAble, tasks, setTasks, createTask}) {
 
-  const createTask = (title, label, subject) => {
-    const newTask = [...tasks,
-      {
-        id: Math.floor(Math.random()*1000),
-        task: title,
-        tipo: label,
-        content: subject,
-        completa: false
-      }
-    ]
-    console.log(title, label, subject)
-    setTasks(newTask)
-    setAble(!able)
-  }
-  getTasks(tasks)
-
+  // console.log(Children)
   return (
     <section className='tasks-background'>
         {tasks.map(x => 

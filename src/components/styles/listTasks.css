@@ -1,5 +1,49 @@
 .listTasks-background{
-    background: red;
-    padding: 10px;
+    list-style: none;
+    font-size: 24px;
+    background: #0F2545;
+    padding: 25px 30px;
     max-width: 400px;
+}
+
+.item-lista{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 0px 0px 10px 0px;
+
+    .actions{
+        display: flex;
+        gap: 10px;
+    }
+
+    .completar{
+        background: greenyellow;
+    }
+    .deletar{
+        background: red;
+    }
+    .editar{
+        background: white;
+    }
+
+    .completar, .deletar, .editar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 4px;
+        cursor: pointer;
+        opacity: .5;
+
+        img{
+            width: 75%;
+        }
+    }
+
+    .completar:hover, .deletar:hover, .editar:hover{
+        transition: .3s;
+        opacity: 1;
+    }
 }
